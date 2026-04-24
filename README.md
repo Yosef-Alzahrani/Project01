@@ -1,24 +1,65 @@
-# AI Health Assistant Web App
+#  HealAI - Intelligent Wound & Health Assessment Platform
 
-## 📌 Project Description
-This project is a health web application that helps users check and understand basic health information.
+## 📌 Overview
+HealAI is an AI-powered health platform designed to assist in wound assessment and general health analysis. The system enables users to upload wound images, receive instant classification, and access health insights through an intuitive web interface. :contentReference[oaicite:0]{index=0}
 
-##  Main Features
-- AI wound image analysis to classify wound severity
-- Weight, height, BMI, and health status calculator
-- Disease encyclopedia with health information
-- Simple user-friendly interfaces
+---
 
-## Wound Classification
-Users can upload a wound image, and the model evaluates the severity level.
+##  Key Features
 
-##  Health Calculator
-The app calculates health-related values such as weight, height, and body mass index.
+###  AI Wound Classification
+- Upload wound images for instant analysis  
+- Classifies wounds into multiple categories (Low / Medium / High risk)  
+- Achieves **96.2% accuracy** using deep learning models :contentReference[oaicite:1]{index=1}  
 
-##  Disease Encyclopedia
-The app provides information about different diseases and health topics.
+### ⚖️ Health & BMI Analysis
+- Calculates Body Mass Index (BMI)  
+- Provides personalized health insights and exercise recommendations  
+
+### 📚 Disease Encyclopedia
+- Browse diseases by category and severity  
+- Access detailed medical information  
+
+### 📊 Health Reports
+- View previous wound assessments  
+- Track health progress over time  
+
+---
+
+##  System Architecture
+The system follows a **three-tier architecture**:
+
+- **Frontend:** React (UI)  
+- **Backend:** FastAPI (API & logic)  
+- **AI Model:** TensorFlow / CNN for image classification  
+- **Communication:** REST APIs :contentReference[oaicite:2]{index=2}  
+
+---
+
+## ⚡ Performance
+- AI inference time: **~166–186 ms**  
+- End-to-end response: **< 1.5 seconds**  
+- Model accuracy: **96.2%** :contentReference[oaicite:3]{index=3}  
+
+---
+
+## 🔒 Security
+- JWT-based authentication  
+- Password hashing (bcrypt)  
+- Local processing for sensitive data  
+
+---
+
+## 🛠️ Technologies Used
+- Python / FastAPI  
+- React / TypeScript  
+- TensorFlow / Keras  
+- REST APIs  
+
+---
 
 ## ▶️ How to Run
+
 ```bash
 npm install
 npm run dev or npm run dev:all
