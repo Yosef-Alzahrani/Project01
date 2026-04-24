@@ -1,0 +1,219 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ============ LIGHT MODE (Default) ============ */
+:root {
+  /* Page & Surface */
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-hover: #F1F5F9;
+  --bg-surface-alt: #F0F9FF;
+  /* Primary */
+  --color-primary: #2563EB;
+  --color-primary-light: #3B82F6;
+  --color-primary-50: #EFF6FF;
+  --color-primary-100: #DBEAFE;
+  --color-primary-700: #1D4ED8;
+  /* Text */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  /* Borders & Shadows */
+  --border-color: #E2E8F0;
+  --border-color-light: #F1F5F9;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-nav: 0 1px 3px rgba(0, 0, 0, 0.04);
+  /* Hero */
+  --hero-bg: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 50%, #EFF6FF 100%);
+  --hero-text: #0F172A;
+  --hero-badge-bg: rgba(37, 99, 235, 0.08);
+  --hero-badge-text: #2563EB;
+  /* Icon */
+  --icon-color: #2563EB;
+  --icon-bg: rgba(37, 99, 235, 0.08);
+  /* Success */
+  --color-success-50: #ECFDF5;
+  --color-success-500: #10B981;
+  --color-success-600: #059669;
+  /* Warning */
+  --color-warning-50: #FFFBEB;
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #D97706;
+  /* Danger */
+  --color-danger-50: #FEF2F2;
+  --color-danger-500: #EF4444;
+  --color-danger-600: #DC2626;
+}
+/* ============ DARK MODE ============ */
+.dark {
+  --bg-page: #0B0F19;
+  --bg-surface: rgba(17, 24, 39, 0.8);
+  --bg-surface-hover: rgba(255, 255, 255, 0.04);
+  --bg-surface-alt: rgba(30, 58, 138, 0.15);
+  /* Primary */
+  --color-primary: #3B82F6;
+  --color-primary-light: #60A5FA;
+  --color-primary-50: rgba(37, 99, 235, 0.1);
+  --color-primary-100: rgba(37, 99, 235, 0.15);
+  --color-primary-700: #2563EB;
+  /* Text */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  /* Borders & Shadows */
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-color-light: rgba(255, 255, 255, 0.03);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-nav: 0 1px 3px rgba(0, 0, 0, 0.3);
+  /* Hero */
+  --hero-bg: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(37, 99, 235, 0.15) 100%);
+  --hero-text: #FFFFFF;
+  --hero-badge-bg: rgba(255, 255, 255, 0.1);
+  --hero-badge-text: #93C5FD;
+  /* Icon */
+  --icon-color: #60A5FA;
+  --icon-bg: rgba(59, 130, 246, 0.1);
+  /* Success */
+  --color-success-50: rgba(16, 185, 129, 0.1);
+  --color-success-500: #10B981;
+  --color-success-600: #34D399;
+  /* Warning */
+  --color-warning-50: rgba(245, 158, 11, 0.1);
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #FBBF24;
+  /* Danger */
+  --color-danger-50: rgba(239, 68, 68, 0.1);
+  --color-danger-500: #EF4444;
+  --color-danger-600: #F87171;
+}
+/* ============ Smooth Theme Transition ============ */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+/* Exclude elements that need instant transitions */
+button *,
+a *,
+input,
+select,
+textarea,
+[class*="animate-"],
+svg,
+svg * {
+  transition-duration: 0ms !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+/* ============ Medical AI Background Animations ============ */
+
+@keyframes medicalGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes medicalGlowFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.07; }
+  25% { transform: translate(30px, -20px) scale(1.1); opacity: 0.1; }
+  50% { transform: translate(-20px, 30px) scale(0.95); opacity: 0.06; }
+  75% { transform: translate(15px, 15px) scale(1.05); opacity: 0.09; }
+}
+@keyframes medicalGlowFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.05; }
+  33% { transform: translate(-25px, 20px) scale(1.08); opacity: 0.08; }
+  66% { transform: translate(20px, -15px) scale(0.92); opacity: 0.04; }
+}
+@keyframes medicalGlowFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.06; }
+  40% { transform: translate(15px, 25px) scale(1.12); opacity: 0.09; }
+  80% { transform: translate(-30px, -10px) scale(0.9); opacity: 0.04; }
+}
+@keyframes ecgPulse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes neuralPulse {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.07; }
+}
+.medical-bg-glow-1 {
+  animation: medicalGlowFloat1 20s ease-in-out infinite;
+}
+.medical-bg-glow-2 {
+  animation: medicalGlowFloat2 25s ease-in-out infinite;
+}
+.medical-bg-glow-3 {
+  animation: medicalGlowFloat3 18s ease-in-out infinite;
+}
+.medical-ecg-line {
+  animation: ecgPulse 15s linear infinite;
+}
+.medical-neural-grid {
+  animation: neuralPulse 20s ease-in-out infinite;
+  background-image:
+    radial-gradient(circle, rgba(37, 99, 235, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+/* ============ End Medical AI Background ============ */
+
+/* Dark mode select/option fix */
+.dark select option {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+select option {
+  background-color: #ffffff;
+  color: #111827;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
