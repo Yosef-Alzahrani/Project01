@@ -1,7 +1,7 @@
 #  HealAI - Intelligent Wound & Health Assessment Platform
 
 ## 📌 Overview
-HealAI is an AI-powered health platform designed to assist in wound assessment and general health analysis. The system enables users to upload wound images, receive instant classification, and access health insights through an intuitive web interface. :contentReference[oaicite:0]{index=0}
+HealAI is an AI-powered health platform designed to assist in wound assessment and general health analysis. The system enables users to upload wound images, receive instant classification, and access health insights through an intuitive web interface. 
 
 ---
 
@@ -10,7 +10,7 @@ HealAI is an AI-powered health platform designed to assist in wound assessment a
 ###  AI Wound Classification
 - Upload wound images for instant analysis  
 - Classifies wounds into multiple categories (Low / Medium / High risk)  
-- Achieves **96.2% accuracy** using deep learning models :contentReference[oaicite:1]{index=1}  
+- Achieves **96.2% accuracy** using deep learning models  
 
 ### ⚖️ Health & BMI Analysis
 - Calculates Body Mass Index (BMI)  
@@ -32,14 +32,14 @@ The system follows a **three-tier architecture**:
 - **Frontend:** React (UI)  
 - **Backend:** FastAPI (API & logic)  
 - **AI Model:** TensorFlow / CNN for image classification  
-- **Communication:** REST APIs :contentReference[oaicite:2]{index=2}  
+- **Communication:** REST APIs 
 
 ---
 
 ## ⚡ Performance
 - AI inference time: **~166–186 ms**  
 - End-to-end response: **< 1.5 seconds**  
-- Model accuracy: **96.2%** :contentReference[oaicite:3]{index=3}  
+- Model accuracy: **96.2%**  
 
 ---
 
