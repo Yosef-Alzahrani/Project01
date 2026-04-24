@@ -1,4 +1,13 @@
-#  HealAI - Intelligent Wound & Health Assessment Platform
+# 🧠 MedGrade AI
+
+> Intelligent AI-powered platform for wound classification, health analysis, and medical knowledge exploration.
+
+![Preview](./dashboard.png)
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![AI](https://img.shields.io/badge/AI-DeepLearning-purple)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ## 📌 Overview
 HealAI is an AI-powered health platform designed to assist in wound assessment and general health analysis. The system enables users to upload wound images, receive instant classification, and access health insights through an intuitive web interface. 
